@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E75D802323CE22F100B04A16 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D802223CE22F100B04A16 /* MatchDetails.swift */; };
+		E75D802523CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D802423CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift */; };
+		E75D802723CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D802623CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift */; };
+		E75D802923CF827E00B04A16 /* PlayerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D802823CF827E00B04A16 /* PlayerDetails.swift */; };
+		E75D803C23D093CE00B04A16 /* PlayerErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D803B23D093CE00B04A16 /* PlayerErrors.swift */; };
+		E75D804023D09DAB00B04A16 /* TftServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D803F23D09DAB00B04A16 /* TftServiceTest.swift */; };
+		E75D804323D0AF9400B04A16 /* ServiceMocksTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D804223D0AF9400B04A16 /* ServiceMocksTest.swift */; };
+		E765A73F23D1DB1300639B74 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E765A73E23D1DB1300639B74 /* SF-Pro-Text-Semibold.otf */; };
+		E765A74023D1DB1300639B74 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E765A73E23D1DB1300639B74 /* SF-Pro-Text-Semibold.otf */; };
+		E765A74223D1DB2200639B74 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E765A74123D1DB2200639B74 /* SF-Pro-Text-Medium.otf */; };
+		E765A74323D1DB2200639B74 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E765A74123D1DB2200639B74 /* SF-Pro-Text-Medium.otf */; };
+		E765A74523D1DB2E00639B74 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E765A74423D1DB2E00639B74 /* SF-Pro-Text-Bold.otf */; };
+		E765A74623D1DB2E00639B74 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E765A74423D1DB2E00639B74 /* SF-Pro-Text-Bold.otf */; };
+		E7A10D7F23AA94540001B1EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10D7E23AA94540001B1EB /* AppDelegate.swift */; };
+		E7A10D8123AA94540001B1EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10D8023AA94540001B1EB /* SceneDelegate.swift */; };
+		E7A10D8623AA94540001B1EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A10D8423AA94540001B1EB /* Main.storyboard */; };
+		E7A10D8823AA94560001B1EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A10D8723AA94560001B1EB /* Assets.xcassets */; };
+		E7A10D8B23AA94560001B1EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A10D8923AA94560001B1EB /* LaunchScreen.storyboard */; };
+		E7A10D9323AA95690001B1EB /* BuildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10D9223AA95690001B1EB /* BuildViewController.swift */; };
+		E7A10DB523AADE380001B1EB /* PlayerBuildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10DB423AADE380001B1EB /* PlayerBuildTableViewCell.swift */; };
+		E7AB16F023D1EC5A002042B6 /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB16EF23D1EC5A002042B6 /* CustomFonts.swift */; };
+		E7AB16F623D22D9D002042B6 /* ProPlayersBuildViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB16F523D22D9D002042B6 /* ProPlayersBuildViewControllerExtension.swift */; };
+		E7F838B223AC0D150012FC88 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F838B123AC0D150012FC88 /* Champion.swift */; };
+		E7F838B423AC0F7A0012FC88 /* champions.json in Resources */ = {isa = PBXBuildFile; fileRef = E7F838B323AC0F7A0012FC88 /* champions.json */; };
+		E7F838B723AC17CF0012FC88 /* TftDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F838B623AC17CF0012FC88 /* TftDAO.swift */; };
+		E7F838B923AC17DA0012FC88 /* TftService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F838B823AC17DA0012FC88 /* TftService.swift */; };
+		E7F838BB23AC907F0012FC88 /* ChampionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F838BA23AC907F0012FC88 /* ChampionCollectionViewCell.swift */; };
+		E7F838BD23B3F5BA0012FC88 /* ProPlayersBuildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F838BC23B3F5BA0012FC88 /* ProPlayersBuildViewController.swift */; };
+		E7F838BF23B3FD4A0012FC88 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F838BE23B3FD4A0012FC88 /* UserDetails.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E75D803523D0908F00B04A16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7A10D7323AA94540001B1EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7A10D7A23AA94540001B1EB;
+			remoteInfo = "TFT-ProTeams";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E75D802223CE22F100B04A16 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
+		E75D802423CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfissionalCellTableViewCell.swift; sourceTree = "<group>"; };
+		E75D802623CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionBuildCollectionViewCell.swift; sourceTree = "<group>"; };
+		E75D802823CF827E00B04A16 /* PlayerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetails.swift; sourceTree = "<group>"; };
+		E75D803023D0908F00B04A16 /* TFT-ProTeamsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TFT-ProTeamsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E75D803423D0908F00B04A16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E75D803B23D093CE00B04A16 /* PlayerErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerErrors.swift; sourceTree = "<group>"; };
+		E75D803F23D09DAB00B04A16 /* TftServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TftServiceTest.swift; sourceTree = "<group>"; };
+		E75D804223D0AF9400B04A16 /* ServiceMocksTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMocksTest.swift; sourceTree = "<group>"; };
+		E765A73E23D1DB1300639B74 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		E765A74123D1DB2200639B74 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		E765A74423D1DB2E00639B74 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		E7A10D7B23AA94540001B1EB /* TFT-ProTeams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TFT-ProTeams.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A10D7E23AA94540001B1EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7A10D8023AA94540001B1EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E7A10D8523AA94540001B1EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7A10D8723AA94560001B1EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7A10D8A23AA94560001B1EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7A10D8C23AA94560001B1EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7A10D9223AA95690001B1EB /* BuildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildViewController.swift; sourceTree = "<group>"; };
+		E7A10DB423AADE380001B1EB /* PlayerBuildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBuildTableViewCell.swift; sourceTree = "<group>"; };
+		E7AB16EF23D1EC5A002042B6 /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
+		E7AB16F523D22D9D002042B6 /* ProPlayersBuildViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPlayersBuildViewControllerExtension.swift; sourceTree = "<group>"; };
+		E7F838B123AC0D150012FC88 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		E7F838B323AC0F7A0012FC88 /* champions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = champions.json; sourceTree = "<group>"; };
+		E7F838B623AC17CF0012FC88 /* TftDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TftDAO.swift; sourceTree = "<group>"; };
+		E7F838B823AC17DA0012FC88 /* TftService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TftService.swift; sourceTree = "<group>"; };
+		E7F838BA23AC907F0012FC88 /* ChampionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7F838BC23B3F5BA0012FC88 /* ProPlayersBuildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPlayersBuildViewController.swift; sourceTree = "<group>"; };
+		E7F838BE23B3FD4A0012FC88 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E75D802D23D0908F00B04A16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A10D7823AA94540001B1EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E75D803123D0908F00B04A16 /* TFT-ProTeamsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E75D804123D0AF5200B04A16 /* Mocks */,
+				E75D803423D0908F00B04A16 /* Info.plist */,
+				E75D803F23D09DAB00B04A16 /* TftServiceTest.swift */,
+			);
+			path = "TFT-ProTeamsTests";
+			sourceTree = "<group>";
+		};
+		E75D803A23D0931E00B04A16 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				E75D803B23D093CE00B04A16 /* PlayerErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		E75D804123D0AF5200B04A16 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E75D804223D0AF9400B04A16 /* ServiceMocksTest.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E7A10D7223AA94540001B1EB = {
+			isa = PBXGroup;
+			children = (
+				E7A10D7D23AA94540001B1EB /* TFT-ProTeams */,
+				E75D803123D0908F00B04A16 /* TFT-ProTeamsTests */,
+				E7A10D7C23AA94540001B1EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7A10D7C23AA94540001B1EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7A10D7B23AA94540001B1EB /* TFT-ProTeams.app */,
+				E75D803023D0908F00B04A16 /* TFT-ProTeamsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7A10D7D23AA94540001B1EB /* TFT-ProTeams */ = {
+			isa = PBXGroup;
+			children = (
+				E7F838B523AC17B30012FC88 /* Business */,
+				E7A10DBE23AAE2E50001B1EB /* Cells */,
+				E7A10DBD23AAE2D20001B1EB /* Storyboards */,
+				E7A10DBC23AAE2C80001B1EB /* ViewControllers */,
+				E75D803A23D0931E00B04A16 /* Errors */,
+				E7A10DBB23AAE2C20001B1EB /* Extensions */,
+				E7A10DBA23AAE2BD0001B1EB /* Models */,
+				E7AB16F223D21DA4002042B6 /* Resource */,
+				E7A10D7E23AA94540001B1EB /* AppDelegate.swift */,
+				E7A10D8023AA94540001B1EB /* SceneDelegate.swift */,
+				E7A10D8C23AA94560001B1EB /* Info.plist */,
+			);
+			path = "TFT-ProTeams";
+			sourceTree = "<group>";
+		};
+		E7A10DBA23AAE2BD0001B1EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7F838B123AC0D150012FC88 /* Champion.swift */,
+				E7F838BE23B3FD4A0012FC88 /* UserDetails.swift */,
+				E75D802223CE22F100B04A16 /* MatchDetails.swift */,
+				E75D802823CF827E00B04A16 /* PlayerDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E7A10DBB23AAE2C20001B1EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E7AB16EF23D1EC5A002042B6 /* CustomFonts.swift */,
+				E7AB16F523D22D9D002042B6 /* ProPlayersBuildViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E7A10DBC23AAE2C80001B1EB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E7A10D9223AA95690001B1EB /* BuildViewController.swift */,
+				E7F838BC23B3F5BA0012FC88 /* ProPlayersBuildViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E7A10DBD23AAE2D20001B1EB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E7A10D8423AA94540001B1EB /* Main.storyboard */,
+				E7A10D8923AA94560001B1EB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E7A10DBE23AAE2E50001B1EB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E7A10DB423AADE380001B1EB /* PlayerBuildTableViewCell.swift */,
+				E7F838BA23AC907F0012FC88 /* ChampionCollectionViewCell.swift */,
+				E75D802423CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift */,
+				E75D802623CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E7AB16F123D21D90002042B6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E765A74423D1DB2E00639B74 /* SF-Pro-Text-Bold.otf */,
+				E765A73E23D1DB1300639B74 /* SF-Pro-Text-Semibold.otf */,
+				E765A74123D1DB2200639B74 /* SF-Pro-Text-Medium.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E7AB16F223D21DA4002042B6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E7F838B323AC0F7A0012FC88 /* champions.json */,
+				E7A10D8723AA94560001B1EB /* Assets.xcassets */,
+				E7AB16F123D21D90002042B6 /* Fonts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E7F838B523AC17B30012FC88 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				E7F838B623AC17CF0012FC88 /* TftDAO.swift */,
+				E7F838B823AC17DA0012FC88 /* TftService.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E75D802F23D0908F00B04A16 /* TFT-ProTeamsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E75D803723D0908F00B04A16 /* Build configuration list for PBXNativeTarget "TFT-ProTeamsTests" */;
+			buildPhases = (
+				E75D802C23D0908F00B04A16 /* Sources */,
+				E75D802D23D0908F00B04A16 /* Frameworks */,
+				E75D802E23D0908F00B04A16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E75D803623D0908F00B04A16 /* PBXTargetDependency */,
+			);
+			name = "TFT-ProTeamsTests";
+			productName = "TFT-ProTeamsTests";
+			productReference = E75D803023D0908F00B04A16 /* TFT-ProTeamsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7A10D7A23AA94540001B1EB /* TFT-ProTeams */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A10D8F23AA94560001B1EB /* Build configuration list for PBXNativeTarget "TFT-ProTeams" */;
+			buildPhases = (
+				E7A10D7723AA94540001B1EB /* Sources */,
+				E7A10D7823AA94540001B1EB /* Frameworks */,
+				E7A10D7923AA94540001B1EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TFT-ProTeams";
+			productName = "TFT-ProTeams";
+			productReference = E7A10D7B23AA94540001B1EB /* TFT-ProTeams.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7A10D7323AA94540001B1EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Júlio John Tavares Ramos";
+				TargetAttributes = {
+					E75D802F23D0908F00B04A16 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = E7A10D7A23AA94540001B1EB;
+					};
+					E7A10D7A23AA94540001B1EB = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = E7A10D7623AA94540001B1EB /* Build configuration list for PBXProject "TFT-ProTeams" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7A10D7223AA94540001B1EB;
+			productRefGroup = E7A10D7C23AA94540001B1EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7A10D7A23AA94540001B1EB /* TFT-ProTeams */,
+				E75D802F23D0908F00B04A16 /* TFT-ProTeamsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E75D802E23D0908F00B04A16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E765A74323D1DB2200639B74 /* SF-Pro-Text-Medium.otf in Resources */,
+				E765A74023D1DB1300639B74 /* SF-Pro-Text-Semibold.otf in Resources */,
+				E765A74623D1DB2E00639B74 /* SF-Pro-Text-Bold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A10D7923AA94540001B1EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7F838B423AC0F7A0012FC88 /* champions.json in Resources */,
+				E765A74523D1DB2E00639B74 /* SF-Pro-Text-Bold.otf in Resources */,
+				E7A10D8B23AA94560001B1EB /* LaunchScreen.storyboard in Resources */,
+				E765A74223D1DB2200639B74 /* SF-Pro-Text-Medium.otf in Resources */,
+				E765A73F23D1DB1300639B74 /* SF-Pro-Text-Semibold.otf in Resources */,
+				E7A10D8823AA94560001B1EB /* Assets.xcassets in Resources */,
+				E7A10D8623AA94540001B1EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E75D802C23D0908F00B04A16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75D804023D09DAB00B04A16 /* TftServiceTest.swift in Sources */,
+				E75D804323D0AF9400B04A16 /* ServiceMocksTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7A10D7723AA94540001B1EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A10DB523AADE380001B1EB /* PlayerBuildTableViewCell.swift in Sources */,
+				E7AB16F023D1EC5A002042B6 /* CustomFonts.swift in Sources */,
+				E7F838B923AC17DA0012FC88 /* TftService.swift in Sources */,
+				E75D802723CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift in Sources */,
+				E75D802523CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift in Sources */,
+				E75D803C23D093CE00B04A16 /* PlayerErrors.swift in Sources */,
+				E7F838BD23B3F5BA0012FC88 /* ProPlayersBuildViewController.swift in Sources */,
+				E7F838BB23AC907F0012FC88 /* ChampionCollectionViewCell.swift in Sources */,
+				E7F838B223AC0D150012FC88 /* Champion.swift in Sources */,
+				E7A10D7F23AA94540001B1EB /* AppDelegate.swift in Sources */,
+				E7A10D8123AA94540001B1EB /* SceneDelegate.swift in Sources */,
+				E7AB16F623D22D9D002042B6 /* ProPlayersBuildViewControllerExtension.swift in Sources */,
+				E7F838B723AC17CF0012FC88 /* TftDAO.swift in Sources */,
+				E75D802323CE22F100B04A16 /* MatchDetails.swift in Sources */,
+				E75D802923CF827E00B04A16 /* PlayerDetails.swift in Sources */,
+				E7A10D9323AA95690001B1EB /* BuildViewController.swift in Sources */,
+				E7F838BF23B3FD4A0012FC88 /* UserDetails.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E75D803623D0908F00B04A16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7A10D7A23AA94540001B1EB /* TFT-ProTeams */;
+			targetProxy = E75D803523D0908F00B04A16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E7A10D8423AA94540001B1EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7A10D8523AA94540001B1EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7A10D8923AA94560001B1EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7A10D8A23AA94560001B1EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E75D803823D0908F00B04A16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				INFOPLIST_FILE = "TFT-ProTeamsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "juliojohn.TFT-ProTeamsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT-ProTeams.app/TFT-ProTeams";
+			};
+			name = Debug;
+		};
+		E75D803923D0908F00B04A16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				INFOPLIST_FILE = "TFT-ProTeamsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "juliojohn.TFT-ProTeamsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFT-ProTeams.app/TFT-ProTeams";
+			};
+			name = Release;
+		};
+		E7A10D8D23AA94560001B1EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E7A10D8E23AA94560001B1EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7A10D9023AA94560001B1EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				INFOPLIST_FILE = "TFT-ProTeams/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "juliojohn.TFT-ProTeams";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7A10D9123AA94560001B1EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
+				INFOPLIST_FILE = "TFT-ProTeams/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "juliojohn.TFT-ProTeams";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E75D803723D0908F00B04A16 /* Build configuration list for PBXNativeTarget "TFT-ProTeamsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E75D803823D0908F00B04A16 /* Debug */,
+				E75D803923D0908F00B04A16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A10D7623AA94540001B1EB /* Build configuration list for PBXProject "TFT-ProTeams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A10D8D23AA94560001B1EB /* Debug */,
+				E7A10D8E23AA94560001B1EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A10D8F23AA94560001B1EB /* Build configuration list for PBXNativeTarget "TFT-ProTeams" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A10D9023AA94560001B1EB /* Debug */,
+				E7A10D9123AA94560001B1EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7A10D7323AA94540001B1EB /* Project object */;
+}
