@@ -37,8 +37,6 @@ class ProPlayersBuildViewController: UIViewController, UITableViewDelegate, UITa
                         self.myPlayer  = playerDetails
                         
                         self.championsOfTheGame = self.getMonstersInPlayerMatch(puuid: playerDetails.puuid, Match: playerDetails.matchs![0])
-                        
-                        
                     } else {
                         print("Player details está nulo!")
                     }
@@ -88,25 +86,41 @@ extension ProPlayersBuildViewController {
         return (myPlayer?.matchs?.count)!
     }
     
-    func tableChampionCellInit(_ cell: ProfissionalCellTableViewCell, _ companionSkin: Int, _ matchDetails: [MatchDetails], _ position: Int, _ indexPath: IndexPath) {
-        cell.championImage.image = UIImage(named: "\(companionSkin)")
-        cell.playerName.text = myPlayer?.name
-        cell.timeThisMatch.text = "\(matchDetails[position].info.game_datetime)"
-        cell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profissionalCell", for: indexPath) as! ProfissionalCellTableViewCell
         if let matchDetails = self.myPlayer?.matchs {
             if matchDetails.count != 0 {
                 let position = indexPath.row
-                let companionSkin: Int = matchDetails[position].info.participants[0].companion.skin_ID
+                let companionRace: String = (myPlayer?.searchForPlayerCompanionIcon())!
                 
-                tableChampionCellInit(cell, companionSkin, matchDetails, position, indexPath)
+                //Setando a foto do companion
+                cell.championImage.image = UIImage(named: companionRace)
+                cell.championImage.layer.cornerRadius =  (cell.championImage.layer.frame.width / 2)
+                cell.championImage.contentMode = .scaleAspectFill
+                
+                //Setando outras informacoes
+                cell.playerName.text = myPlayer?.name
+                cell.timeThisMatch.text = tranformUnixInDate(date: matchDetails[position].info.game_datetime)
+                
+                //Procurando traits do player
+                let traits = (self.myPlayer?.searchForPlayerTraits())!
+                
+                cell.setCollectionViewDataSourceDelegate(championsOfTheGame: championsOfTheGame!, traitsOfTheGame: traits)
             }
         }
         
         return cell
+    }
+    
+    func tranformUnixInDate(date: Double) -> String {
+        let newDate = Date(timeIntervalSince1970: date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+        //Seta a zona
+        dateFormatter.locale = NSLocale.current
+        //Formatacao da data
+        dateFormatter.dateFormat = "dd/MM HH:mm"
+        return dateFormatter.string(from: newDate)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -122,7 +136,6 @@ extension ProPlayersBuildViewController {
         let label = UILabel()
         label.frame = CGRect.init(x: 20, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
         label.text = "Hot Builds"
-        
         label.font = UIFont(name: "SFProText-Bold", size: 17)
         label.textColor = UIColor.black
 
@@ -134,49 +147,4 @@ extension ProPlayersBuildViewController {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 46
     }
-}
-
-//CollectionView
-extension ProPlayersBuildViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        numberOfItemsInSection section: Int) -> Int {
-        if let champions = self.championsOfTheGame {
-            return champions.count
-        } else {
-            return 0
-        }
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "championImage",
-                                                      for: indexPath) as? ChampionBuildCollectionViewCell
-        
-        if let champions = self.championsOfTheGame {
-            cell?.championImage.layer.borderColor = colorByRarity(rarity: champions[indexPath.item].rarity)
-            cell?.championImage.image = UIImage(named: champions[indexPath.item].name)
-            cell?.championImage.layer.borderWidth = 2.0
-            cell?.championImage.layer.cornerRadius = 1.5
-            cell?.championImage.contentMode = .scaleAspectFit
-        }
-        
-        return cell!
-    }
-    
-    func colorByRarity(rarity: Int) -> CGColor {
-        let rarityArray: [CGColor] = [
-            UIColor(red: 128/256, green: 128/256, blue: 128/256, alpha: 1.0).cgColor,
-            UIColor(red: 66/256, green: 194/256, blue: 160/256, alpha: 1.0).cgColor,
-            UIColor(red: 85/256, green: 153/256, blue: 213/256, alpha: 1.0).cgColor,
-            UIColor(red: 203/256, green: 83/256, blue: 222/256, alpha: 1.0).cgColor,
-            UIColor(red: 255/256, green: 185/256, blue: 59/256, alpha: 1.0).cgColor]
-        return rarityArray[rarity]
-    }
-    
 }

@@ -204,8 +204,8 @@
 			children = (
 				E7A10DB423AADE380001B1EB /* PlayerBuildTableViewCell.swift */,
 				E7F838BA23AC907F0012FC88 /* ChampionCollectionViewCell.swift */,
-				E75D802423CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift */,
 				E75D802623CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift */,
+				E75D802423CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

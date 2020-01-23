@@ -24,4 +24,26 @@ struct PlayerDetails {
         self.puuid = "Not initialized"
         self.matchs = []
     }
+    
+    func searchForPlayerCompanionIcon() -> String {
+        if let matchs = matchs {
+            for y in 0 ... matchs[0].info.participants.count - 1 {
+                if self.puuid == matchs[0].info.participants[y].puuid {
+                    return matchs[0].info.participants[y].companion.species
+                }
+            }
+        }
+        return ""
+    }
+    
+    func searchForPlayerTraits() -> [TraitDetails] {
+        if let matchs = matchs {
+            for y in 0 ... matchs[0].info.participants.count - 1 {
+                if self.puuid == matchs[0].info.participants[y].puuid {
+                    return matchs[0].info.participants[y].traits
+                }
+            }
+        }
+        return []
+    }
 }
