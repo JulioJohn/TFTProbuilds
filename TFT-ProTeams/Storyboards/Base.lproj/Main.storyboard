@@ -58,30 +58,30 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mgn-7R-0bH">
-                                                            <rect key="frame" x="26" y="89" width="359" height="32"/>
+                                                            <rect key="frame" x="26" y="86" width="359" height="35"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="32" id="QXh-wF-dy5"/>
+                                                                <constraint firstAttribute="height" constant="35" id="QXh-wF-dy5"/>
                                                             </constraints>
-                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="3" id="4Wg-qO-Jy9">
-                                                                <size key="itemSize" width="31" height="31"/>
+                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="4" minimumInteritemSpacing="1" id="4Wg-qO-Jy9">
+                                                                <size key="itemSize" width="32" height="32"/>
                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                             </collectionViewFlowLayout>
                                                             <cells>
                                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="championImage" id="3JN-IC-ZJK" customClass="ChampionBuildCollectionViewCell" customModule="TFT_ProTeams" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.5" width="31" height="31"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zNa-TN-qlv">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="omF-NC-6J6">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="omF-NC-6J6" secondAttribute="height" multiplier="1:1" id="E8E-Qh-ydZ"/>
-                                                                                    <constraint firstAttribute="height" constant="32" id="eVF-mY-euX"/>
+                                                                                    <constraint firstAttribute="height" constant="35" id="eVF-mY-euX"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                         </subviews>
@@ -92,7 +92,7 @@
                                                                             <constraint firstAttribute="trailing" secondItem="omF-NC-6J6" secondAttribute="trailing" id="wD9-Gr-ika"/>
                                                                         </constraints>
                                                                     </collectionViewCellContentView>
-                                                                    <size key="customSize" width="31" height="31"/>
+                                                                    <size key="customSize" width="35" height="35"/>
                                                                     <connections>
                                                                         <outlet property="championImage" destination="omF-NC-6J6" id="DrU-65-0S8"/>
                                                                     </connections>
@@ -100,49 +100,47 @@
                                                             </cells>
                                                         </collectionView>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cqM-QM-T3W" userLabel="TraitsCollection">
-                                                            <rect key="frame" x="26" y="60" width="359" height="27"/>
+                                                            <rect key="frame" x="26" y="61" width="359" height="23"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                            <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lf7-vx-PBq">
-                                                                <size key="itemSize" width="28" height="28"/>
+                                                            <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="2" id="Lf7-vx-PBq">
+                                                                <size key="itemSize" width="20" height="20"/>
                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                             </collectionViewFlowLayout>
                                                             <cells>
                                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="traitsCollectionCell" id="nOk-rm-IXR" customClass="ChampionBuildCollectionViewCell" customModule="TFT_ProTeams" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="26" height="26"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ji0-RT-dPV">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="26" height="26"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="traitBackground" translatesAutoresizingMaskIntoConstraints="NO" id="9Nm-4f-ch6">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="26" height="26"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="9Nm-4f-ch6" secondAttribute="height" multiplier="1:1" id="R8k-xU-UIY"/>
                                                                                     <constraint firstAttribute="height" constant="29" id="rXT-eF-7qk"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7A7-Fq-dW5">
-                                                                                <rect key="frame" x="3" y="3" width="23" height="23"/>
+                                                                                <rect key="frame" x="2.5" y="2.5" width="21" height="21"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="height" constant="23" id="1hJ-kL-kQU"/>
+                                                                                    <constraint firstAttribute="height" constant="21" id="1hJ-kL-kQU"/>
                                                                                     <constraint firstAttribute="width" secondItem="7A7-Fq-dW5" secondAttribute="height" multiplier="1:1" id="hsy-9w-m11"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                         </subviews>
                                                                         <constraints>
                                                                             <constraint firstAttribute="bottom" secondItem="9Nm-4f-ch6" secondAttribute="bottom" id="6jE-Av-uUv"/>
+                                                                            <constraint firstItem="7A7-Fq-dW5" firstAttribute="centerX" secondItem="ji0-RT-dPV" secondAttribute="centerX" id="ACU-Qe-sIH"/>
                                                                             <constraint firstItem="9Nm-4f-ch6" firstAttribute="leading" secondItem="ji0-RT-dPV" secondAttribute="leading" id="BD9-Sx-Pai"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="7A7-Fq-dW5" secondAttribute="trailing" constant="3" id="Gdb-pD-e3w"/>
                                                                             <constraint firstItem="9Nm-4f-ch6" firstAttribute="top" secondItem="ji0-RT-dPV" secondAttribute="top" id="JSh-xO-BIC"/>
-                                                                            <constraint firstItem="7A7-Fq-dW5" firstAttribute="top" secondItem="ji0-RT-dPV" secondAttribute="top" constant="3" id="RF3-bZ-TVb"/>
-                                                                            <constraint firstItem="7A7-Fq-dW5" firstAttribute="leading" secondItem="ji0-RT-dPV" secondAttribute="leading" constant="3" id="TN8-am-TIm"/>
                                                                             <constraint firstAttribute="trailing" secondItem="9Nm-4f-ch6" secondAttribute="trailing" id="cn0-80-bRp"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="7A7-Fq-dW5" secondAttribute="bottom" constant="3" id="paI-h4-pjs"/>
+                                                                            <constraint firstItem="7A7-Fq-dW5" firstAttribute="centerY" secondItem="ji0-RT-dPV" secondAttribute="centerY" id="x6r-8g-AAG"/>
                                                                         </constraints>
                                                                     </collectionViewCellContentView>
-                                                                    <size key="customSize" width="29" height="29"/>
+                                                                    <size key="customSize" width="26" height="26"/>
                                                                     <connections>
                                                                         <outlet property="championImage" destination="7A7-Fq-dW5" id="Sdw-5R-GMk"/>
                                                                     </connections>
@@ -156,7 +154,7 @@
                                                         <constraint firstItem="Eoy-cZ-ixG" firstAttribute="top" secondItem="ij0-tp-jup" secondAttribute="top" constant="10" id="DMZ-40-QEb"/>
                                                         <constraint firstAttribute="bottom" secondItem="Mgn-7R-0bH" secondAttribute="bottom" constant="11" id="Lmv-Z9-kpe"/>
                                                         <constraint firstItem="0bS-0J-BWk" firstAttribute="leading" secondItem="Eoy-cZ-ixG" secondAttribute="trailing" constant="6" id="PTh-TL-Z6I"/>
-                                                        <constraint firstItem="cqM-QM-T3W" firstAttribute="top" secondItem="Eoy-cZ-ixG" secondAttribute="bottom" constant="5" id="VR6-mt-EMY"/>
+                                                        <constraint firstItem="cqM-QM-T3W" firstAttribute="top" secondItem="Eoy-cZ-ixG" secondAttribute="bottom" constant="6" id="VR6-mt-EMY"/>
                                                         <constraint firstAttribute="trailing" secondItem="Mgn-7R-0bH" secondAttribute="trailing" constant="29" id="WdT-Xe-Khd"/>
                                                         <constraint firstAttribute="trailing" secondItem="cqM-QM-T3W" secondAttribute="trailing" constant="29" id="X88-Sv-sIp"/>
                                                         <constraint firstItem="Mgn-7R-0bH" firstAttribute="leading" secondItem="ij0-tp-jup" secondAttribute="leading" constant="26" id="hjF-cd-dUf"/>

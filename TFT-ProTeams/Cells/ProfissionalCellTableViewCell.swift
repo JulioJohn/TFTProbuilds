@@ -22,13 +22,20 @@ class ProfissionalCellTableViewCell: UITableViewCell, UICollectionViewDelegate, 
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
     }
     
-    func setCollectionViewDataSourceDelegate(championsOfTheGame: [UnitDetails], traitsOfTheGame: [TraitDetails]) {
-        self.championsOfTheGame = championsOfTheGame
-        self.traitsOfTheGame = traitsOfTheGame
+    func setCollectionViewDataSourceDelegate(playerDetails: PlayerDetails) {
+        //Pegando os monstros desse player nessa partida
+        let champions = playerDetails.getMonstersInPlayerMatch()
+        //Ordenar pela raridade
+        let sortedChampions = champions!.sorted {
+            $0.rarity < $1.rarity
+        }
+        self.championsOfTheGame = sortedChampions
+        
+        //Procurando traits do player
+        let traits = playerDetails.searchForPlayerTraits()
+        self.traitsOfTheGame = traits
         
         championsCollectionView.delegate = self
         championsCollectionView.dataSource = self
@@ -69,7 +76,11 @@ class ProfissionalCellTableViewCell: UITableViewCell, UICollectionViewDelegate, 
             
             if let champions = self.championsOfTheGame {
                 cell?.championImage.layer.borderColor = colorByRarity(rarity: champions[indexPath.item].rarity)
-                cell?.championImage.image = UIImage(named: champions[indexPath.item].name)
+                if champions[indexPath.item].rarity == 5 {
+                    cell?.championImage.image = UIImage(named: "TFT2_Lux")
+                } else {
+                    cell?.championImage.image = UIImage(named: champions[indexPath.item].character_id)
+                }
                 cell?.championImage.layer.borderWidth = 2.0
                 cell?.championImage.layer.cornerRadius = 1.5
                 cell?.championImage.contentMode = .scaleAspectFit
@@ -77,16 +88,17 @@ class ProfissionalCellTableViewCell: UITableViewCell, UICollectionViewDelegate, 
             
             return cell!
         } else if collectionView == traitsCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "traitsCollectionCell",
-            for: indexPath) as? ChampionBuildCollectionViewCell
-            
             if let traits = self.traitsOfTheGame {
-                cell?.championImage.image = UIImage(named: traits[indexPath.item].name)
-                print(traits[indexPath.item].name)
-                cell?.championImage.contentMode = .scaleAspectFit
+                if traits[indexPath.item].tier_current != 0 {
+                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "traitsCollectionCell", for: indexPath) as? ChampionBuildCollectionViewCell
+                    
+                    cell?.championImage.image = UIImage(named: traits[indexPath.item].name)
+                    cell?.championImage.contentMode = .scaleAspectFit
+                    
+                    return cell!
+                }
             }
-            
-            return cell!
+            return UICollectionViewCell()
         } else {
             return UICollectionViewCell()
         }
@@ -107,10 +119,11 @@ extension ProfissionalCellTableViewCell {
     func colorByRarity(rarity: Int) -> CGColor {
         let rarityArray: [CGColor] = [
             UIColor(red: 128/256, green: 128/256, blue: 128/256, alpha: 1.0).cgColor,
-            UIColor(red: 66/256, green: 194/256, blue: 160/256, alpha: 1.0).cgColor,
+            UIColor(red: 47/256, green: 144/256, blue: 119/256, alpha: 1.0).cgColor,
             UIColor(red: 85/256, green: 153/256, blue: 213/256, alpha: 1.0).cgColor,
             UIColor(red: 203/256, green: 83/256, blue: 222/256, alpha: 1.0).cgColor,
-            UIColor(red: 255/256, green: 185/256, blue: 59/256, alpha: 1.0).cgColor]
+            UIColor(red: 255/256, green: 185/256, blue: 59/256, alpha: 1.0).cgColor,
+            UIColor(red: 255/256, green: 59/256, blue: 59/256, alpha: 1.0).cgColor]
         return rarityArray[rarity]
     }
 }

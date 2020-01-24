@@ -64,7 +64,9 @@ class TftServices {
     ///   - name: Nome do jogador
     ///   - countOfMatchs: Numero de ultimas partidas
     ///   - completion: Devolve os dados do jogador completos em formato PlayerDetails e/ou um error
-    func getUserMatchsByUserName(name: String, countOfMatchs: Int, completion: @escaping(PlayerDetails?, Error?) -> Void) {
+    func getUserMatchsByUserName(name: String, countOfMatchs: Int, completion: @escaping([PlayerDetails]?, Error?) -> Void) {
+        var allPlayerMatchsByMatchDetails: [PlayerDetails] = []
+        
         //Fazendo pesquisa por um usuario
         self.getUserData(userName: name) { (userData, error) in
             if error != nil {
@@ -73,17 +75,20 @@ class TftServices {
             }
             
             if let puuid = userData?.puuid {
-                self.getUserMatchs(count: countOfMatchs, puuid: puuid) { (matchDetails, error) in
+                self.getUserMatchs(count: countOfMatchs, puuid: puuid) { (userMatchs, error) in
                     if error != nil {
                         completion(nil, error)
                         return
                     }
                     //Existem matchs
-                    if let matchs = matchDetails {
+                    if let matchs = userMatchs {
                         //caso tenha nome
                         if let name = userData?.name {
-                            let player: PlayerDetails = PlayerDetails(name: name, puuid: puuid, matchs: matchs)
-                            completion(player, nil)
+                            for quantityOfMatchs in 0 ... matchs.count - 1 {
+                                let player: PlayerDetails = PlayerDetails(name: name, puuid: puuid, matchs: matchs[quantityOfMatchs])
+                                allPlayerMatchsByMatchDetails.append(player)
+                            }
+                            completion(allPlayerMatchsByMatchDetails, nil)
                         } else {
                             //caso  nao tenha nome
                             completion(nil, PlayerErrors.thePlayerHasNoName)
@@ -108,15 +113,34 @@ class TftServices {
         let size = matchIdsArray.count - 1
         var matchs: [MatchDetails] = []
         
+        let group = DispatchGroup()
+        var lastError: Error? =  nil
+        
+        //Para cada matchID entra numa fila de requisicao
+        for index in  0 ... size {
+            group.enter()
+        }
+        
         //Captura o Match referente ao seu MatchID e guarda em "matchs"
         for index in  0 ... size {
             self.tftDAO.getMatchByMatchID(matchId: matchIdsArray[index]) { (matchDetails, error) in
+                group.leave()
                 if let matchDetails = matchDetails {
                     matchs.append(matchDetails)
-                    completion(matchs, nil)
+                   // completion(matchs, nil)
                 } else {
-                    completion(nil, error)
+                    lastError = error
+                    //completion(nil, error)
                 }
+            }
+        }
+        
+        //Quando todos sairem da fila de requisicao ativa o completion
+        group.notify(queue: DispatchQueue.main) {
+            if let resultError = lastError  {
+                completion(nil, resultError)
+            } else {
+                completion(matchs, nil)
             }
         }
     }
