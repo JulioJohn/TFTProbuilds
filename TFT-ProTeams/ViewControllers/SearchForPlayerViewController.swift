@@ -1,34 +1,40 @@
 //
-//  ProPlayersBuildViewController.swift
+//  SearchForPlayerViewController.swift
 //  TFT-ProTeams
 //
-//  Created by Júlio John Tavares Ramos on 25/12/19.
-//  Copyright © 2019 Júlio John Tavares Ramos. All rights reserved.
+//  Created by Júlio John Tavares Ramos on 29/01/20.
+//  Copyright © 2020 Júlio John Tavares Ramos. All rights reserved.
 //
 
 import UIKit
 
-class ProPlayersBuildViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchForPlayerViewController: UIViewController, UISearchBarDelegate {
     
-    @IBOutlet weak var proBuildsTableView: UITableView!
-    
-    var myPlayer: [PlayerDetails]? = nil
+    @IBOutlet weak var monsterTableView: UITableView!
+    @IBOutlet weak var playerSearchBar: UISearchBar!
     
     var tftServices: TftServices = TftServices()
-    
-    @IBOutlet weak var activityView: UIActivityIndicatorView!
+    var myPlayer: [PlayerDetails]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Muda a cor da barra de status
         navigationController?.navigationBar.barStyle = .black
-
-        //Esperando carregar arquivos
-        startSpinning(activity: activityView)
+        
+        playerSearchBar.delegate = self
+        monsterTableView.delegate = self
+        monsterTableView.dataSource = self
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let text = searchBar.searchTextField
+        if text.hasText == false { return }
+        
+        searchBar.resignFirstResponder()
         
         //Fazendo pesquisa por um usuario
-        self.tftServices.getUserMatchsByUserName(name: "CABRITOVOADOR", countOfMatchs: 10) { (playerDetails, error) in
+        self.tftServices.getUserMatchsByUserName(name: text.text!, countOfMatchs: 10) { (playerDetails, error) in
             if error == nil {
                 DispatchQueue.main.async {
                     if let playerDetails = playerDetails {
@@ -40,10 +46,7 @@ class ProPlayersBuildViewController: UIViewController, UITableViewDelegate, UITa
                         print("Player details está nulo!")
                     }
                     
-                    self.proBuildsTableView.reloadData()
-                    
-                    //Para a animacao de carregamento
-                    self.stopSpinning(activity: self.activityView)
+                    self.monsterTableView.reloadData()
                 }
             } else {
                 print(error)
@@ -52,8 +55,8 @@ class ProPlayersBuildViewController: UIViewController, UITableViewDelegate, UITa
     }
 }
 
-//TableView
-extension ProPlayersBuildViewController {
+    //TableView
+extension SearchForPlayerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1 //myPlayer!.count
     }
@@ -68,6 +71,7 @@ extension ProPlayersBuildViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profissionalCell", for: indexPath) as! ProfissionalCellTableViewCell
+        
         if let player = self.myPlayer {
             let myPlayer = player[indexPath.section]
             
@@ -75,8 +79,13 @@ extension ProPlayersBuildViewController {
                 let companionRace: String = myPlayer.searchForPlayerCompanionIcon()
                 
                 //Setando a foto do companion
-                cell.championImage.image = UIImage(named: companionRace)
-                cell.championImage.layer.cornerRadius =  (cell.championImage.layer.frame.width/2)
+                if let image = UIImage(named: companionRace) {
+                    cell.championImage.image = image
+                } else {
+                    cell.championImage.image = UIImage(named: "PetTFTAvatar")
+                }
+                
+                cell.championImage.layer.cornerRadius = (cell.championImage.layer.frame.width/2)
                 cell.championImage.contentMode = .scaleAspectFill
                 
                 //Setando outras informacoes
@@ -116,15 +125,6 @@ extension ProPlayersBuildViewController {
             timeToReturnInString = "weeks ago"
         }
         return "\(Int(timeToReturn.rounded())) " + timeToReturnInString
-        
-//        let newDate = Date(timeIntervalSince1970: dateFixedWithoutLast3Digits)
-//        let dateFormatter = DateFormatter()
-//        //Seta a zona
-//        dateFormatter.locale = NSLocale.current
-//        //Formatacao da data
-//        dateFormatter.timeStyle = .short
-//        dateFormatter.dateStyle = .short
-//        return dateFormatter.string(from: newDate)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -134,25 +134,10 @@ extension ProPlayersBuildViewController {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         tableView.separatorStyle = .none
         
-//        if section == 0 {
-//            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-//            headerView.backgroundColor = .clear
-//
-//            let label = UILabel()
-//            label.frame = CGRect.init(x: 20, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-//            label.text = "Hot Builds"
-//            label.font = UIFont(name: "SFProText-Bold", size: 17)
-//            label.textColor = UIColor.black
-//
-//            headerView.addSubview(label)
-//
-//            return headerView
-//        }
-        
         return UIView()
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5 //46
+        return 5
     }
 }

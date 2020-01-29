@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7062BB023E212E60068A44D /* SearchForPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7062BAF23E212E60068A44D /* SearchForPlayerViewController.swift */; };
+		E7062BB123E212E60068A44D /* SearchForPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7062BAF23E212E60068A44D /* SearchForPlayerViewController.swift */; };
 		E75D802323CE22F100B04A16 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D802223CE22F100B04A16 /* MatchDetails.swift */; };
 		E75D802523CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D802423CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift */; };
 		E75D802723CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D802623CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift */; };
@@ -49,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7062BAF23E212E60068A44D /* SearchForPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForPlayerViewController.swift; sourceTree = "<group>"; };
 		E75D802223CE22F100B04A16 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
 		E75D802423CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfissionalCellTableViewCell.swift; sourceTree = "<group>"; };
 		E75D802623CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionBuildCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 			children = (
 				E7A10D9223AA95690001B1EB /* BuildViewController.swift */,
 				E7F838BC23B3F5BA0012FC88 /* ProPlayersBuildViewController.swift */,
+				E7062BAF23E212E60068A44D /* SearchForPlayerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -349,6 +353,7 @@
 			files = (
 				E75D804023D09DAB00B04A16 /* TftServiceTest.swift in Sources */,
 				E75D804323D0AF9400B04A16 /* ServiceMocksTest.swift in Sources */,
+				E7062BB123E212E60068A44D /* SearchForPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +366,7 @@
 				E7F838B923AC17DA0012FC88 /* TftService.swift in Sources */,
 				E75D802723CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift in Sources */,
 				E75D802523CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift in Sources */,
+				E7062BB023E212E60068A44D /* SearchForPlayerViewController.swift in Sources */,
 				E75D803C23D093CE00B04A16 /* PlayerErrors.swift in Sources */,
 				E7F838BD23B3F5BA0012FC88 /* ProPlayersBuildViewController.swift in Sources */,
 				E7F838BB23AC907F0012FC88 /* ChampionCollectionViewCell.swift in Sources */,
