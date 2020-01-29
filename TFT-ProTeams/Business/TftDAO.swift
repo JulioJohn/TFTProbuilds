@@ -16,7 +16,7 @@ protocol TftDAO {
 }
 
 class TftDAOProduction: TftDAO {
-    let API_KEY: String = "RGAPI-501b5b2b-aff2-40b1-b994-5c770f3bbc1e"
+    let API_KEY: String = "RGAPI-9b268485-a8d6-49d2-99f6-24ae3ecdb46d"
     
     func championLoadJson(filename fileName: String, completion: @escaping ([Champion]?, Error?) -> Void) {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {

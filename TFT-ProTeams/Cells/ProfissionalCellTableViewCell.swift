@@ -76,11 +76,14 @@ class ProfissionalCellTableViewCell: UITableViewCell, UICollectionViewDelegate, 
             
             if let champions = self.championsOfTheGame {
                 cell?.championImage.layer.borderColor = colorByRarity(rarity: champions[indexPath.item].rarity)
+                
+                //Caso seja raridade 5 só pode ser a Lux no TFT2
                 if champions[indexPath.item].rarity == 5 {
                     cell?.championImage.image = UIImage(named: "TFT2_Lux")
                 } else {
                     cell?.championImage.image = UIImage(named: champions[indexPath.item].character_id)
                 }
+                
                 cell?.championImage.layer.borderWidth = 2.0
                 cell?.championImage.layer.cornerRadius = 1.5
                 cell?.championImage.contentMode = .scaleAspectFit

@@ -97,7 +97,7 @@ extension ProPlayersBuildViewController {
         //Seta a zona
         dateFormatter.locale = NSLocale.current
         //Formatacao da data
-        dateFormatter.dateFormat = "dd/MM HH:mm"
+        dateFormatter.dateFormat = "dd/MMM HH:mm"
         return dateFormatter.string(from: newDate)
     }
     
