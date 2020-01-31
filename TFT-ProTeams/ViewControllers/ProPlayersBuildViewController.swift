@@ -55,7 +55,11 @@ class ProPlayersBuildViewController: UIViewController, UITableViewDelegate, UITa
 //TableView
 extension ProPlayersBuildViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 //myPlayer!.count
+        if myPlayer == nil {
+            return 0
+        } else {
+            return 1
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -67,6 +71,11 @@ extension ProPlayersBuildViewController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath)
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "profissionalCell", for: indexPath) as! ProfissionalCellTableViewCell
         if let player = self.myPlayer {
             let myPlayer = player[indexPath.section]
@@ -98,6 +107,7 @@ extension ProPlayersBuildViewController {
         
         let dateComparation = todayDate - dateFixedWithoutLast3Digits
         
+        let oneHourInSeconds = 3600.0
         let oneDayInSeconds = 86400.0
         let oneWeekInSeconds = 604800.0
         
@@ -106,7 +116,7 @@ extension ProPlayersBuildViewController {
         
         //Se a diferenca de datas for maior do que um dia
         if dateComparation < oneDayInSeconds {
-            timeToReturn = dateComparation/60
+            timeToReturn = dateComparation/oneHourInSeconds
             timeToReturnInString = "hours ago"
         } else if dateComparation < oneWeekInSeconds {
             timeToReturn = dateComparation/oneDayInSeconds
@@ -128,31 +138,24 @@ extension ProPlayersBuildViewController {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        let cellSize: Double
+        
+        if indexPath.section == 0 {
+            cellSize = CellSize.titleCell.rawValue
+        } else {
+            cellSize = CellSize.cardCell.rawValue
+        }
+        
+        return CGFloat(cellSize)
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         tableView.separatorStyle = .none
         
-//        if section == 0 {
-//            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-//            headerView.backgroundColor = .clear
-//
-//            let label = UILabel()
-//            label.frame = CGRect.init(x: 20, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-//            label.text = "Hot Builds"
-//            label.font = UIFont(name: "SFProText-Bold", size: 17)
-//            label.textColor = UIColor.black
-//
-//            headerView.addSubview(label)
-//
-//            return headerView
-//        }
-        
         return UIView()
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5 //46
+        return 5
     }
 }

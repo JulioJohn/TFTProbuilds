@@ -16,7 +16,7 @@ protocol TftDAO {
 }
 
 class TftDAOProduction: TftDAO {
-    let API_KEY: String = "RGAPI-810808e3-94e8-451f-8f0b-517a40542d59"
+    let API_KEY: String = "RGAPI-94d6f409-140c-4d6d-bce2-3e4f2a48012f"
     
     func championLoadJson(filename fileName: String, completion: @escaping ([Champion]?, Error?) -> Void) {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
@@ -32,6 +32,8 @@ class TftDAOProduction: TftDAO {
     }
     
     func getUserData(userName: String, completion: @escaping(UserDetails?, Error?) -> Void) {
+        let userName = userName.removeWhitespace()
+        
         let resourceString =
         "https://br1.api.riotgames.com/tft/summoner/v1/summoners/by-name/\(userName)?api_key=\(API_KEY)"
         

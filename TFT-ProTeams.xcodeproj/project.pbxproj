@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E7062BB023E212E60068A44D /* SearchForPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7062BAF23E212E60068A44D /* SearchForPlayerViewController.swift */; };
-		E7062BB123E212E60068A44D /* SearchForPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7062BAF23E212E60068A44D /* SearchForPlayerViewController.swift */; };
+		E7062BB323E36F6F0068A44D /* CellSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7062BB223E36F6F0068A44D /* CellSize.swift */; };
+		E7062BB423E36F6F0068A44D /* CellSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7062BB223E36F6F0068A44D /* CellSize.swift */; };
+		E7062BB623E371070068A44D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7062BB523E371070068A44D /* UIViewControllerExtension.swift */; };
+		E7062BB723E371070068A44D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7062BB523E371070068A44D /* UIViewControllerExtension.swift */; };
 		E75D802323CE22F100B04A16 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D802223CE22F100B04A16 /* MatchDetails.swift */; };
 		E75D802523CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D802423CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift */; };
 		E75D802723CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D802623CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift */; };
@@ -22,6 +25,7 @@
 		E765A74323D1DB2200639B74 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E765A74123D1DB2200639B74 /* SF-Pro-Text-Medium.otf */; };
 		E765A74523D1DB2E00639B74 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E765A74423D1DB2E00639B74 /* SF-Pro-Text-Bold.otf */; };
 		E765A74623D1DB2E00639B74 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E765A74423D1DB2E00639B74 /* SF-Pro-Text-Bold.otf */; };
+		E784251523E48E820026A28C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784251423E48E820026A28C /* StringExtension.swift */; };
 		E7A10D7F23AA94540001B1EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10D7E23AA94540001B1EB /* AppDelegate.swift */; };
 		E7A10D8123AA94540001B1EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10D8023AA94540001B1EB /* SceneDelegate.swift */; };
 		E7A10D8623AA94540001B1EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A10D8423AA94540001B1EB /* Main.storyboard */; };
@@ -29,8 +33,6 @@
 		E7A10D8B23AA94560001B1EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A10D8923AA94560001B1EB /* LaunchScreen.storyboard */; };
 		E7A10D9323AA95690001B1EB /* BuildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10D9223AA95690001B1EB /* BuildViewController.swift */; };
 		E7A10DB523AADE380001B1EB /* PlayerBuildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A10DB423AADE380001B1EB /* PlayerBuildTableViewCell.swift */; };
-		E7AB16F023D1EC5A002042B6 /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB16EF23D1EC5A002042B6 /* CustomFonts.swift */; };
-		E7AB16F623D22D9D002042B6 /* ProPlayersBuildViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB16F523D22D9D002042B6 /* ProPlayersBuildViewControllerExtension.swift */; };
 		E7F838B223AC0D150012FC88 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F838B123AC0D150012FC88 /* Champion.swift */; };
 		E7F838B423AC0F7A0012FC88 /* champions.json in Resources */ = {isa = PBXBuildFile; fileRef = E7F838B323AC0F7A0012FC88 /* champions.json */; };
 		E7F838B723AC17CF0012FC88 /* TftDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F838B623AC17CF0012FC88 /* TftDAO.swift */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		E7062BAF23E212E60068A44D /* SearchForPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForPlayerViewController.swift; sourceTree = "<group>"; };
+		E7062BB223E36F6F0068A44D /* CellSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSize.swift; sourceTree = "<group>"; };
+		E7062BB523E371070068A44D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E75D802223CE22F100B04A16 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
 		E75D802423CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfissionalCellTableViewCell.swift; sourceTree = "<group>"; };
 		E75D802623CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionBuildCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -64,7 +68,8 @@
 		E765A73E23D1DB1300639B74 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		E765A74123D1DB2200639B74 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		E765A74423D1DB2E00639B74 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
-		E7A10D7B23AA94540001B1EB /* TFT-ProTeams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TFT-ProTeams.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E784251423E48E820026A28C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E7A10D7B23AA94540001B1EB /* Olaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Olaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A10D7E23AA94540001B1EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7A10D8023AA94540001B1EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E7A10D8523AA94540001B1EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,8 +78,6 @@
 		E7A10D8C23AA94560001B1EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A10D9223AA95690001B1EB /* BuildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildViewController.swift; sourceTree = "<group>"; };
 		E7A10DB423AADE380001B1EB /* PlayerBuildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBuildTableViewCell.swift; sourceTree = "<group>"; };
-		E7AB16EF23D1EC5A002042B6 /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
-		E7AB16F523D22D9D002042B6 /* ProPlayersBuildViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProPlayersBuildViewControllerExtension.swift; sourceTree = "<group>"; };
 		E7F838B123AC0D150012FC88 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		E7F838B323AC0F7A0012FC88 /* champions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = champions.json; sourceTree = "<group>"; };
 		E7F838B623AC17CF0012FC88 /* TftDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TftDAO.swift; sourceTree = "<group>"; };
@@ -140,7 +143,7 @@
 		E7A10D7C23AA94540001B1EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7A10D7B23AA94540001B1EB /* TFT-ProTeams.app */,
+				E7A10D7B23AA94540001B1EB /* Olaf.app */,
 				E75D803023D0908F00B04A16 /* TFT-ProTeamsTests.xctest */,
 			);
 			name = Products;
@@ -178,8 +181,9 @@
 		E7A10DBB23AAE2C20001B1EB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E7AB16EF23D1EC5A002042B6 /* CustomFonts.swift */,
-				E7AB16F523D22D9D002042B6 /* ProPlayersBuildViewControllerExtension.swift */,
+				E7062BB223E36F6F0068A44D /* CellSize.swift */,
+				E7062BB523E371070068A44D /* UIViewControllerExtension.swift */,
+				E784251423E48E820026A28C /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -278,7 +282,7 @@
 			);
 			name = "TFT-ProTeams";
 			productName = "TFT-ProTeams";
-			productReference = E7A10D7B23AA94540001B1EB /* TFT-ProTeams.app */;
+			productReference = E7A10D7B23AA94540001B1EB /* Olaf.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -351,9 +355,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7062BB423E36F6F0068A44D /* CellSize.swift in Sources */,
 				E75D804023D09DAB00B04A16 /* TftServiceTest.swift in Sources */,
+				E7062BB723E371070068A44D /* UIViewControllerExtension.swift in Sources */,
 				E75D804323D0AF9400B04A16 /* ServiceMocksTest.swift in Sources */,
-				E7062BB123E212E60068A44D /* SearchForPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +367,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A10DB523AADE380001B1EB /* PlayerBuildTableViewCell.swift in Sources */,
-				E7AB16F023D1EC5A002042B6 /* CustomFonts.swift in Sources */,
 				E7F838B923AC17DA0012FC88 /* TftService.swift in Sources */,
 				E75D802723CF4AFB00B04A16 /* ChampionBuildCollectionViewCell.swift in Sources */,
 				E75D802523CE41FB00B04A16 /* ProfissionalCellTableViewCell.swift in Sources */,
@@ -373,12 +377,14 @@
 				E7F838B223AC0D150012FC88 /* Champion.swift in Sources */,
 				E7A10D7F23AA94540001B1EB /* AppDelegate.swift in Sources */,
 				E7A10D8123AA94540001B1EB /* SceneDelegate.swift in Sources */,
-				E7AB16F623D22D9D002042B6 /* ProPlayersBuildViewControllerExtension.swift in Sources */,
+				E7062BB623E371070068A44D /* UIViewControllerExtension.swift in Sources */,
 				E7F838B723AC17CF0012FC88 /* TftDAO.swift in Sources */,
 				E75D802323CE22F100B04A16 /* MatchDetails.swift in Sources */,
 				E75D802923CF827E00B04A16 /* PlayerDetails.swift in Sources */,
 				E7A10D9323AA95690001B1EB /* BuildViewController.swift in Sources */,
+				E784251523E48E820026A28C /* StringExtension.swift in Sources */,
 				E7F838BF23B3FD4A0012FC88 /* UserDetails.swift in Sources */,
+				E7062BB323E36F6F0068A44D /* CellSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,7 +584,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "juliojohn.TFT-ProTeams";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Olaf;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -596,7 +602,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "juliojohn.TFT-ProTeams";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Olaf;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

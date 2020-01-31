@@ -12,12 +12,15 @@ class SearchForPlayerViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var monsterTableView: UITableView!
     @IBOutlet weak var playerSearchBar: UISearchBar!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var tftServices: TftServices = TftServices()
     var myPlayer: [PlayerDetails]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.stopSpinning(activity: self.activityIndicator)
         
         //Muda a cor da barra de status
         navigationController?.navigationBar.barStyle = .black
@@ -33,6 +36,9 @@ class SearchForPlayerViewController: UIViewController, UISearchBarDelegate {
         
         searchBar.resignFirstResponder()
         
+        //Indica que esta carregando
+        self.startSpinning(activity: self.activityIndicator)
+        
         //Fazendo pesquisa por um usuario
         self.tftServices.getUserMatchsByUserName(name: text.text!, countOfMatchs: 10) { (playerDetails, error) in
             if error == nil {
@@ -47,6 +53,9 @@ class SearchForPlayerViewController: UIViewController, UISearchBarDelegate {
                     }
                     
                     self.monsterTableView.reloadData()
+                    
+                    //Parar de indicar que está carregando
+                    self.stopSpinning(activity: self.activityIndicator)
                 }
             } else {
                 print(error)
@@ -58,7 +67,11 @@ class SearchForPlayerViewController: UIViewController, UISearchBarDelegate {
     //TableView
 extension SearchForPlayerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 //myPlayer!.count
+        if myPlayer == nil {
+            return 0
+        } else {
+            return 1
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,7 +82,7 @@ extension SearchForPlayerViewController: UITableViewDelegate, UITableViewDataSou
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {        
         let cell = tableView.dequeueReusableCell(withIdentifier: "profissionalCell", for: indexPath) as! ProfissionalCellTableViewCell
         
         if let player = self.myPlayer {
@@ -107,6 +120,7 @@ extension SearchForPlayerViewController: UITableViewDelegate, UITableViewDataSou
         
         let dateComparation = todayDate - dateFixedWithoutLast3Digits
         
+        let oneHourInSeconds = 3600.0
         let oneDayInSeconds = 86400.0
         let oneWeekInSeconds = 604800.0
         
@@ -115,7 +129,7 @@ extension SearchForPlayerViewController: UITableViewDelegate, UITableViewDataSou
         
         //Se a diferenca de datas for maior do que um dia
         if dateComparation < oneDayInSeconds {
-            timeToReturn = dateComparation/60
+            timeToReturn = dateComparation/oneHourInSeconds
             timeToReturnInString = "hours ago"
         } else if dateComparation < oneWeekInSeconds {
             timeToReturn = dateComparation/oneDayInSeconds

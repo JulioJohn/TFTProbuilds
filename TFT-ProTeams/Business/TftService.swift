@@ -110,6 +110,10 @@ class TftServices {
     ///   - matchIdsArray: Array de ids de matchs
     ///   - completion: Devolve as partidas em formato MatchDetails e/ou um error
     func getAllMatchsInIDArray(_ matchIdsArray: [String], completion: @escaping([MatchDetails]?, Error?) -> Void) {
+        if matchIdsArray.isEmpty == true {
+            completion(nil, PlayerErrors.thePlayerHasNoMatchs)
+        }
+        
         let size = matchIdsArray.count - 1
         var matchs: [MatchDetails] = []
         
@@ -117,7 +121,7 @@ class TftServices {
         var lastError: Error? =  nil
         
         //Para cada matchID entra numa fila de requisicao
-        for index in  0 ... size {
+        for index in 0 ... size {
             group.enter()
         }
         

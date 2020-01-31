@@ -14,6 +14,9 @@
         <array key="SF-Pro-Text-Medium.otf">
             <string>SFProText-Medium</string>
         </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Explore-->
@@ -28,8 +31,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="titleCell" rowHeight="41" id="l6a-eR-T2X" customClass="ProfissionalCellTableViewCell" customModule="TFT_ProTeams" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="41"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l6a-eR-T2X" id="nMc-1f-rUt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hot Builds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB0-Gy-7ru">
+                                                    <rect key="frame" x="18" y="9" width="376" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="JBM-57-gSr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="zB0-Gy-7ru" secondAttribute="bottom" constant="9" id="BWx-99-tAa"/>
+                                                <constraint firstItem="zB0-Gy-7ru" firstAttribute="top" secondItem="nMc-1f-rUt" secondAttribute="top" constant="9" id="b45-Zy-gna"/>
+                                                <constraint firstItem="zB0-Gy-7ru" firstAttribute="leading" secondItem="nMc-1f-rUt" secondAttribute="leading" constant="18" id="cFH-fs-t1B"/>
+                                                <constraint firstAttribute="trailing" secondItem="zB0-Gy-7ru" secondAttribute="trailing" constant="20" id="uJ5-44-nQP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profissionalCell" rowHeight="138" id="sZm-M5-aRy" customClass="ProfissionalCellTableViewCell" customModule="TFT_ProTeams" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="138"/>
+                                        <rect key="frame" x="0.0" y="69" width="414" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sZm-M5-aRy" id="EyS-FP-dAi">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
@@ -51,7 +80,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDe-b1-28y">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDe-b1-28y">
                                                             <rect key="frame" x="77" y="34" width="237" height="18"/>
                                                             <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="15"/>
                                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
@@ -157,7 +186,7 @@
                                                         <constraint firstItem="cqM-QM-T3W" firstAttribute="top" secondItem="Eoy-cZ-ixG" secondAttribute="bottom" constant="6" id="VR6-mt-EMY"/>
                                                         <constraint firstAttribute="trailing" secondItem="Mgn-7R-0bH" secondAttribute="trailing" constant="29" id="WdT-Xe-Khd"/>
                                                         <constraint firstAttribute="trailing" secondItem="cqM-QM-T3W" secondAttribute="trailing" constant="29" id="X88-Sv-sIp"/>
-                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dDe-b1-28y" secondAttribute="trailing" constant="20" symbolic="YES" id="gm7-9A-MkH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="dDe-b1-28y" secondAttribute="trailing" constant="100" id="gm7-9A-MkH"/>
                                                         <constraint firstItem="Mgn-7R-0bH" firstAttribute="leading" secondItem="ij0-tp-jup" secondAttribute="leading" constant="26" id="hjF-cd-dUf"/>
                                                         <constraint firstAttribute="trailing" secondItem="0bS-0J-BWk" secondAttribute="trailing" constant="100" id="lKT-Xa-2lU"/>
                                                         <constraint firstItem="dDe-b1-28y" firstAttribute="leading" secondItem="0bS-0J-BWk" secondAttribute="leading" id="m3R-gp-5to"/>
@@ -229,7 +258,6 @@
         <!--Search Player-->
         <scene sceneID="Y7o-gm-ggX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HC7-UO-mCQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="VBq-P9-PBJ" customClass="SearchForPlayerViewController" customModule="TFT_ProTeams" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ode-BE-SS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
@@ -401,13 +429,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-af-T6n">
+                                <rect key="frame" x="197" y="377" width="20" height="20"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="M2h-ci-oZs" firstAttribute="top" secondItem="Ual-t3-Ctb" secondAttribute="bottom" symbolic="YES" id="0gm-id-st8"/>
+                            <constraint firstItem="Gac-af-T6n" firstAttribute="centerX" secondItem="m7x-cp-ydn" secondAttribute="centerX" id="0iC-mh-bAu"/>
                             <constraint firstItem="Ual-t3-Ctb" firstAttribute="leading" secondItem="m7x-cp-ydn" secondAttribute="leading" id="6Uz-dh-dN7"/>
                             <constraint firstItem="m7x-cp-ydn" firstAttribute="trailing" secondItem="Ual-t3-Ctb" secondAttribute="trailing" id="AZ6-92-46A"/>
                             <constraint firstItem="m7x-cp-ydn" firstAttribute="trailing" secondItem="M2h-ci-oZs" secondAttribute="trailing" id="P7d-KY-cLs"/>
+                            <constraint firstItem="Gac-af-T6n" firstAttribute="centerY" secondItem="m7x-cp-ydn" secondAttribute="centerY" id="PFd-H0-4Kk"/>
                             <constraint firstItem="M2h-ci-oZs" firstAttribute="leading" secondItem="m7x-cp-ydn" secondAttribute="leading" id="SJa-rb-4oL"/>
                             <constraint firstItem="m7x-cp-ydn" firstAttribute="bottom" secondItem="M2h-ci-oZs" secondAttribute="bottom" id="fFZ-AM-Ufe"/>
                             <constraint firstItem="m7x-cp-ydn" firstAttribute="top" secondItem="Ual-t3-Ctb" secondAttribute="top" id="nYP-zv-a37"/>
@@ -416,10 +450,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Search Player" id="Gc7-SE-pTx"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Gac-af-T6n" id="4N8-Oc-1X3"/>
                         <outlet property="monsterTableView" destination="M2h-ci-oZs" id="xmo-hN-jP4"/>
                         <outlet property="playerSearchBar" destination="Ual-t3-Ctb" id="LPp-NQ-Q4M"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HC7-UO-mCQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="460.86956521739131" y="-382.36607142857139"/>
         </scene>
